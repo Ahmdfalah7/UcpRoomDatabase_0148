@@ -4,32 +4,32 @@ import com.example.ucp2_148.data.dao.BarangDao
 import com.example.ucp2_148.data.entity.Barang
 import kotlinx.coroutines.flow.Flow
 
-class LocalRepositoryBrg {
+class LocalRepositoryBrg(
     private val barangDao: BarangDao
-    ) : RepositoryBrg
-    {
-        override suspend fun insertBrg(barang: Barang) {
-            barangDao.insertBarang(barang)
-        }
+) : RepositoryBrg {
 
-        //getAllBrg
-        override fun getAllBrg(): Flow<List<Barang>> {
-            return barangDao.getAllBarang()
-        }
+    // Insert barang
+    override suspend fun insertBrg(barang: Barang) {
+        barangDao.insertBarang(barang)
+    }
 
-        //getBrg
-        override fun getBarang(id: String): Flow<Barang> {
-            return barangDao.getBarang(id)
-        }
+    // Get all barang
+    override fun getAllBrg(): Flow<List<Barang>> {
+        return barangDao.getAllBarang()
+    }
 
-        //deleteBrg
-        override suspend fun deleteBrg(barang: Barang) {
-            barangDao.deleteBarang(barang)
-        }
+    // Get barang by ID
+    override fun getBrg(id: String): Flow<Barang> {
+        return barangDao.getBarang(id)
+    }
 
-        //updateBrg
-        override suspend fun updateBrg(barang: Barang) {
-            barangDao.updateBarang(barang)
-        }
+    // Delete barang
+    override suspend fun deleteBrg(barang: Barang) {
+        barangDao.deleteBarang(barang)
+    }
+
+    // Update barang
+    override suspend fun updateBrg(barang: Barang) {
+        barangDao.updateBarang(barang)
     }
 }
