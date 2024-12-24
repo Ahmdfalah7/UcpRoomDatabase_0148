@@ -13,3 +13,4 @@ interface RepositoryBrg {
     //updateBrg
     suspend fun updateBrg(barang: Barang)
 }
+
