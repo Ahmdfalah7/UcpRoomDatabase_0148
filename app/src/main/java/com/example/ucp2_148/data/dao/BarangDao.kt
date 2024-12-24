@@ -15,10 +15,10 @@ interface BarangDao {
         barang: Barang
     )
 
-    @Query("SELECT * FROM barang ORDER BY nama ASC")
+    @Query("SELECT * FROM barang ORDER BY namabrg ASC")
     fun getAllBarang(): Flow<List<Barang>>
 
-    @Query("SELECT * FROM barang WHERE id = :id")
+    @Query("SELECT * FROM barang WHERE idbrg = :id")
     fun  getBarang(id: String): Flow<Barang>
 
     @Delete
