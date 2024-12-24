@@ -4,7 +4,7 @@ import com.example.ucp2_148.data.dao.SuplierDao
 import com.example.ucp2_148.data.entity.Suplier
 import kotlinx.coroutines.flow.Flow
 
-class LocalRepositorySpl {
+class LocalRepositorySpl (
     private val suplierDao : SuplierDao
     ) : RepositorySpl
     {
@@ -18,8 +18,7 @@ class LocalRepositorySpl {
         }
 
         //getSpl
-        override fun getSuplier(id: String): Flow<Suplier> {
+        override fun getSpl(id: String): Flow<Suplier> {
             return suplierDao.getSuplier(id)
         }
     }
-}
