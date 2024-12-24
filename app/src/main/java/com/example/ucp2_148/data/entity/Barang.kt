@@ -13,3 +13,5 @@ data class Barang(
     val stok:Int,
     val namaspl: String
 )
+
+
