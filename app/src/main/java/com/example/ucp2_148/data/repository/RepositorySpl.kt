@@ -8,5 +8,4 @@ interface RepositorySpl {
     fun getAllSpl() : Flow<List<Suplier>>
     //getSpl
     fun getSpl(id : String): Flow<Suplier>
-    //getSpl
 }
