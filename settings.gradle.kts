@@ -21,4 +21,4 @@ dependencyResolutionManagement {
 
 rootProject.name = "ucp2_148"
 include(":app")
- 
+include(":mylibrary")
